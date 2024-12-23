@@ -1,6 +1,9 @@
 ### Git Commands
 
-#### <summary>Project 1: HelloWorldProject</summary>
+<details>
+<summary>
+#### Project 1: HelloWorldProject
+</summary>
 
 ##### Initialize Git
 
@@ -31,3 +34,5 @@ git remote add origin https://github.com/YOUR_GITHUB_USERNAME/HelloWorldProject.
 ```
 git push -u origin master
 ```
+
+</details>
