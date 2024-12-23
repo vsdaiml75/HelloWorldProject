@@ -1,9 +1,7 @@
 ### Git Commands
 
 <details>
-<summary>
-#### Project 1: HelloWorldProject
-</summary>
+<summary>Project 1: HelloWorldProject</summary>
 
 ##### Initialize Git
 
