@@ -1,8 +1,8 @@
-# Git Commands
+### Git Commands
 
-## Project 1: HelloWorldProject
+#### Project 1: HelloWorldProject
 
-### Initialize Git
+##### Initialize Git
 
 ```
 git init
