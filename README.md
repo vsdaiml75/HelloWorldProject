@@ -1,6 +1,6 @@
 ### Git Commands
 
-#### Project 1: HelloWorldProject
+#### <summary>Project 1: HelloWorldProject</summary>
 
 ##### Initialize Git
 
