@@ -25,7 +25,7 @@ jobs:
       - name: Build and Push Docker Image
         run: |
           docker buildx create --use  # Set up Docker Buildx if not already available
-          docker buildx build --push -t your-dockerhub-username/hello-world:latest .
+          docker buildx build --push -t vsd23tech/hello-world:latest .
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
