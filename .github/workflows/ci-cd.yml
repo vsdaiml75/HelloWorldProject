@@ -21,7 +21,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      # Step 3: Build and push the Docker image using buildx
+      # Step 3: Build and Push the Docker Image using Buildx
       - name: Build and Push Docker Image
         run: |
           docker buildx create --use  # Set up Docker Buildx if not already available
@@ -30,4 +30,17 @@ jobs:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
-  # Optionally, you could add more jobs like deployment, testing, etc.
+      # Step 4: Pull the Docker Image from Docker Hub (to ensure the image is available locally)
+      - name: Pull Docker Image
+        run: |
+          docker pull vsd23tech/hello-world:latest
+
+      # Step 5: Run the Docker Container
+      - name: Run Docker Container
+        run: |
+          docker run -d --name hello-world-container vsd23tech/hello-world:latest
+
+      # Optional: Verify the container is running
+      - name: Verify Docker Container
+        run: |
+          docker ps  # List running containers
