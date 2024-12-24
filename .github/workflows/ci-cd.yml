@@ -26,9 +26,10 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          tags: vsdaiml75/hello-world:latest
+          tags: vsd23tech/hello-world:latest
 
       - name: Deploy Container
         run: |
-          docker pull vsdaiml75/hello-world:latest
-          docker-compose up --force-recreate -d
+          docker pull vsd23tech/hello-world:latest
+          docker-compose down
+          docker-compose up -d
