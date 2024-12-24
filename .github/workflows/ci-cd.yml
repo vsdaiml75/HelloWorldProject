@@ -26,10 +26,10 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          tags: vsd23tech/hello-world:latest
+          tags: vsd23tech/hello-world1:latest
 
       - name: Deploy Container
         run: |
-          docker pull vsd23tech/hello-world:latest
+          docker pull vsd23tech/hello-world1:latest
           docker-compose down
           docker-compose up -d
