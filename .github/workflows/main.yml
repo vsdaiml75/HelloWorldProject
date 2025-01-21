@@ -1,0 +1,33 @@
+name: Test_Deploy Node to Test Server
+
+# Trigger workflow manually via GitHub UI
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version of the app to deploy'
+        required: true
+        default: '1.0.0'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Deploy to test server
+        run: |
+          echo "Deploying version ${{ github.event.inputs.version }} to the test server"
+          # Simulate deployment command (replace with actual deploy commands)
+          echo "Deployment of version ${{ github.event.inputs.version }} is successful!"
